@@ -4,10 +4,9 @@ body {
   }
   
   .container {
-    text-align: center;
     display: grid;
-    grid-template: 1fr 1fr 4fr 4fr / 1fr 3fr 1fr;
-    gap: 4px;
+    grid-template: 0.5fr 0.5fr 3fr 3fr / 0.8fr 3fr 1fr;
+    background-color: #bccbde;
   }
   
   .container div {
@@ -17,80 +16,73 @@ body {
     font-weight: bold;
     color: white;
   }
+
+  .sidebar {
+    background-color: rgb(32, 135, 253);
+    grid-row: 1 / 5;
+  }
+
+  .dash {
+   display: flex;
+   font-size: 1em;
+   align-items: center;
+  }
+
+  .dash img {
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  .side_options li {
+   font-size: 0.7em; 
+   padding-left: 15px;
+  }
   
   .search {
-    background-color: #393f4d;
-    grid-column: 2 / 4;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-  }
-  
-  .logo {
-    justify-self: start;
-  }
-  
-  .menu {
-    align-self: center;
-  }
-  
-  .menu ul,
-  .menu li {
-    font-size: 16px;
-    list-style-type: none;
-  }
-  
-  .menu ul{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-  
-  .sidebar {
-    background-color: #FF7755;
-    grid-row: 1 / 5;
-    display: grid;
-    gap: 50px;
-  }
-  
-  .sidebar .photo {
     background-color: white;
+    grid-column: 2 / 4;
+    display: flex;
+    
+    align-items: center;
+  }
+
+  input {
+    flex: 1;
+  }
+
+  .search p {
     color: black;
-    font-size: 12px;
-    font-weight: normal;
-    border-radius: 10px;
-    display: grid;           
-    align-items: center;      
-    justify-items: center;
+    font-size: 0.7em;
   }
   
-  
-  .sidebar .side-content {
+  .name_row {
     background-color: white;
+    grid-column: 2 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 2em;
+  }
+
+  .left_name {
+    display: flex;
+    align-items: center;
+  }
+
+  .name_call p, h3{
     color: black;
-    font-size: 16px;
-    font-weight: normal;
-    display: grid;           
-    align-items: center;      
-    justify-items: center;
+    margin: 0;
+  }
+
+  button {
+    background-color: rgb(32, 135, 253);
+    color: white;
+    height: 2.5em;
+    width: 5em;
+    border: none;
+    border-radius: 1.5em;
   }
   
-  .nameRow {
-    background-color: #FF7755;
-    display: grid;
-    grid-column: 2 / 4;
-  }
-  
-  .nameRow ul {
-    display: grid;
-    grid-row: 2 / 3;
-    grid-column: 2 / 4;
-    grid-template-columns: repeat(3, 1fr);
-  }
-  
-  .nameRow ul li {
-    font-size: 16px;
-    text-transform: uppercase;
-    list-style-type: none;
-  }
   
   .projects {
     background-color: #bccbde;
