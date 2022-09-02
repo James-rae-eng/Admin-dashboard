@@ -5,7 +5,7 @@ body {
   
 .container {
     display: grid;
-    grid-template: 0.2fr 0.2fr 3fr 3fr / 0.8fr 3fr 1fr;
+    grid-template: 0.2fr 0.2fr 3fr 3fr / 0.5fr 3fr 0.9fr;
     background-color: #cbd4df;
   }
   
@@ -20,6 +20,7 @@ body {
     grid-row: 1 / 5;
     color: white;
     padding: 20px;
+    border-right: solid 1px rgb(148, 147, 147);
   }
 
 h2 {
@@ -57,7 +58,7 @@ input {
     border: none;
     border-radius: 1em;
     background-color: #cbd4df;
-    padding: 5px;
+    padding: 0.5em;
   }
 
 .search_left {
@@ -84,7 +85,7 @@ input {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 20px 0px 20px;
+    padding: 20px;
   }
 
 .left_name {
@@ -113,17 +114,18 @@ button {
   }
   
 .project_container {
-    box-shadow: inset 0 4px 6px rgb(162, 175, 184);
-    padding: 20px;
+    box-shadow: inset 0 7px 9px -7px rgba(0,0,0,0.4);
+    padding: 0 20px 20px 20px;
+    grid-row: 3 / 5;
 }
   
 .projects {
     background-color: #cbd4df;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     display: grid;
     grid-column: 2 /3;
     grid-row: 3 / 5;
-    gap: 15px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
   
 .projects p {
@@ -134,11 +136,19 @@ button {
   }
   
 .projects .card {
-    background-color: #FFFFFF;
-    color: black;
+    background-color: white;
     text-align: center;
-    height: 200px;
+    height: 210px;
+    padding: 10px 25px 15px 25px;
+    border-radius: 0.4em;
+    margin-right: 5px;
   }
+
+.card {
+    box-shadow: inset 9px 0  rgb(231, 184, 130), 2px 2px 4px 2px rgba(143, 142, 142, 0.377);
+    display: flex;
+    flex-direction: column;
+}
   
 .card p {
     color: black;
@@ -148,8 +158,21 @@ button {
   
 .card .title {
     font-size: 18px;
-    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0;
   }
+
+.card_icons {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+h4 {
+    margin: 0;
+    padding: 30px 0 10px 0;
+}
 
 h5 {
     font-size: 0.6em;
@@ -158,18 +181,26 @@ h5 {
 .announcements {
     grid-column: 3 / 4;
     grid-row: 3 / 4;
+    box-shadow: inset 0 7px 9px -7px rgba(0,0,0,0.4);
   }
 
 .announce_container {
     background-color: white;
+    padding: 10px 25px 15px 25px;
+    border-radius: 0.4em;
+    margin-right: 20px;
 }
-
 
 .news p {
     font-size: 12px;
     color: rgb(110, 110, 110);
 }
   
+#news_middle {
+    border: 2px #cbd4df;
+    border-style: solid none;
+}
+
 .trending {
     grid-column: 3 / 4;
     grid-row: 4 / 5;
@@ -182,4 +213,24 @@ h5 {
 
 .users {
     background-color: white;
+    padding: 10px 25px 15px 25px;
+    border-radius: 0.4em;
+    margin-right: 20px;
   }
+
+.user p {
+    margin: 0;
+    color: rgb(110, 110, 110);
+}
+
+#atuser {
+    font-weight: bold;
+    color: black;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0 20px 0;
+}
